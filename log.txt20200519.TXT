@@ -1,2 +1,0 @@
-2020-05-19 13:42:04,953 [26] INFO  WebServerWithLog4NET.Controllers.HomeController [(null)] - This is a info message.
-2020-05-19 13:42:19,661 [26] ERROR WebServerWithLog4NET.Controllers.HomeController [(null)] - This is a error message.

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServerWithLog4NET", "WebServerWithLog4NET.csproj", "{31195192-FFE9-4C9C-AEE3-FE304D58BE8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETCore_Log4NET_ConfigureByAssembly", "..\NETCore_Log4NET_ConfigureByAssembly\NETCore_Log4NET_ConfigureByAssembly.csproj", "{2F608B74-BE12-43AC-9AC7-0C47D3A6FA5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{31195192-FFE9-4C9C-AEE3-FE304D58BE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31195192-FFE9-4C9C-AEE3-FE304D58BE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31195192-FFE9-4C9C-AEE3-FE304D58BE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F608B74-BE12-43AC-9AC7-0C47D3A6FA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F608B74-BE12-43AC-9AC7-0C47D3A6FA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F608B74-BE12-43AC-9AC7-0C47D3A6FA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F608B74-BE12-43AC-9AC7-0C47D3A6FA5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

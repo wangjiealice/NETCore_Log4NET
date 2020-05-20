@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebServerWithLog4NET.Models;
+using NETCore_Log4NET_ConfigureByAssembly.Models;
+using log4net;
 
-namespace WebServerWithLog4NET.Controllers
+namespace NETCore_Log4NET_ConfigureByAssembly.Controllers
 {
-    [Route("home")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,7 +18,7 @@ namespace WebServerWithLog4NET.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            log = LogManager.GetLogger(Startup.repository.Name, typeof(HomeController));
+            log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         }
 
         public IActionResult Index()
@@ -38,7 +37,7 @@ namespace WebServerWithLog4NET.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [HttpGet("loginfo")]
+        [HttpGet("logInfo")]
         public JsonResult WriteLogInfo()
         {
             string info = "This is a info message.";
@@ -46,7 +45,7 @@ namespace WebServerWithLog4NET.Controllers
             return Json("");
         }
 
-        [HttpGet("logerror")]
+        [HttpGet("logError")]
         public JsonResult WriteLogError()
         {
             string info = "This is a error message.";
