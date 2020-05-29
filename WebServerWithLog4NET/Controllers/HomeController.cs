@@ -43,7 +43,7 @@ namespace WebServerWithLog4NET.Controllers
         {
             string info = "This is a info message.";
             log.Info(info);
-            return Json("");
+            return Json(info);
         }
 
         [HttpGet("logerror")]
@@ -51,7 +51,7 @@ namespace WebServerWithLog4NET.Controllers
         {
             string info = "This is a error message.";
             log.Error(info);
-            return Json("");
+            return Json(info);
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NETCore_Log4NET_ConfigureByAssembly.Models;
 using log4net;
+using System.Reflection;
 
 namespace NETCore_Log4NET_ConfigureByAssembly.Controllers
 {
@@ -19,6 +20,7 @@ namespace NETCore_Log4NET_ConfigureByAssembly.Controllers
         {
             _logger = logger;
             log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+            Array appenders = LogManager.GetRepository(Assembly.GetCallingAssembly()).GetAppenders();
         }
 
         public IActionResult Index()
@@ -42,7 +44,7 @@ namespace NETCore_Log4NET_ConfigureByAssembly.Controllers
         {
             string info = "This is a info message.";
             log.Info(info);
-            return Json("");
+            return Json(info);
         }
 
         [HttpGet("logError")]
@@ -50,7 +52,7 @@ namespace NETCore_Log4NET_ConfigureByAssembly.Controllers
         {
             string info = "This is a error message.";
             log.Error(info);
-            return Json("");
+            return Json(info);
         }
     }
 }

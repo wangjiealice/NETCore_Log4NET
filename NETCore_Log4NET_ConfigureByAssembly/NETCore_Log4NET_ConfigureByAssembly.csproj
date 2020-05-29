@@ -8,6 +8,8 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\1code\NETCore_Log4NET\NETCore_Log4NET_ConfigureByAssembly\NETCore_Log4NET_ConfigureByAssembly.xml</DocumentationFile>
+    <WarningsAsErrors>NU1605,</WarningsAsErrors>
+    <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
